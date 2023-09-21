@@ -1,4 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  color: #2C3B47;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
 html {
   height: 100%;
   width: 100%;
+}
+
+header {
+
+  .avatar-nav {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  .avatar-link {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: monospace;
+    color: black;
+  }
+
+  .avatar-link:hover {
+    color: #D3445A;
+  }
+
+}
+
+main {
+
+  background-color: #F7F8FB;
+  min-height: 1240px;
+
+  .container {
+    min-height: 200px auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .search-form {
+    align-self: flex-end;
+    margin-top: auto;
+  }
+
+  .search-book {
+    width: 65%;
+    align-self: flex-end;
+    margin-top: auto;
+  }
+
+  .search-book:hover {
+    border: 2px solid #D3445A !important;
+  }
+
+  .btn-add {
+    background-color: rgb(211, 68, 90);
+    color: white;
+    font-weight: 500;
+  }
+
+  /* DELETE-MODAL */
+  #confirmDeleteButton:hover {
+    color: #D3445A;
+  }
+
+  .btn-cancel {
+    color: white;
+  }
+
+  .btn-cancel:hover {
+    background-color: #2C3B47;
+  }
+
+}
+
+th:nth-child(1) {
+  width: 40%;
+}
+
+footer {
+  background-color: #D3445A;
+  text-align: center;
 }
