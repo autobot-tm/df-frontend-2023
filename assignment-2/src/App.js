@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useTheme } from "./DataContext";
+import Footer from "./components/Footer";
+import Main from "./components/Main";
+import Nav from "./components/Nav";
 
 function App() {
+  const { theme } = useTheme();
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header
+        className={` ${theme === "light" ? "theme-light" : "theme-dark"}`}
+      >
+        <Nav />
       </header>
+
+      <main className={`${theme === "light" ? "theme-light" : "theme-dark"}`}>
+        <Main />
+      </main>
+
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }
